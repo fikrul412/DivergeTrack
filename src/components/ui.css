@@ -1,0 +1,5 @@
+.ui{
+    background-color: var(--ui-primary-color);
+    flex: 2;
+    flex-grow: 1;
+}

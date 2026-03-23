@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+  box-sizing: border-box;
+}
+/* Font Init */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Style Init */
+:root{
+    --command-primary-color: #37353E;
+    --command-secondary-color: #44444E;
+    --command-teritary-color: #715A5A;
+    --command-accent-color: #D3DAD9;
+    --command-size: 0.75rem;
+    --ui-primary-color: #222831;
+    --ui-secondary-color: #393E46;
+    --ui-teritary-color: #948979;
+    --ui-accent-color: #DFD0B8;
+    --ui-h1: 2.5rem;
+    --ui-h2: 1.5rem;
+    --ui-h3: 1.25rem;
+    --ui-p: 0.75rem;
+}
+
+body, #root{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ui-secondary-color);
+}
+
+/* Templates */
+.shadow-radius1{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}

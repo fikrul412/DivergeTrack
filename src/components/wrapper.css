@@ -1,0 +1,7 @@
+.wrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+    padding: 0.75rem;
+}

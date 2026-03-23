@@ -1,0 +1,8 @@
+.command{
+    background-color: var(--command-primary-color);
+    width: 25rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    padding: 0.5rem;
+}
