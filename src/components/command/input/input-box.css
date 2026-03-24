@@ -4,6 +4,7 @@
     border-radius: 2px;
     height: 1.5rem;
     outline: none;
+    font-weight: 400;
     font-size: var(--command-size);
     color: var(--command-accent-color);
     padding: 0rem 0.5rem;

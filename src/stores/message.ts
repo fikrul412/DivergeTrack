@@ -1,12 +1,17 @@
 import { create } from "zustand"
-import {type Messages, type Commands} from "../../types/generic"
+import { type Messages, type Commands } from "../types/generic"
 
-type CurCommands = {
-    commands: Commands,
-    setCommands: (newCommands: Messages) => void
+type CurCommandsState = {
+    commands: Commands;
+    setCommands: (newCommands: Commands) => void; 
+    clearCommands: () => void;
 }
 
-export const useCurCommands = create<CurCommands>((set) => ({
-    commands : [],
-    setCommands : (newCommands:Messages) => set((state) => ({...state, commands:newCommands}))
+export const useCurCommands = create<CurCommandsState>((set) => ({
+    commands: [],
+    setCommands: (newCommands) => 
+        set(() => ({ 
+            commands: newCommands ?? [] 
+        })),
+    clearCommands: () => set({ commands: [] }),
 }))

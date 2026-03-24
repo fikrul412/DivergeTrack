@@ -1,4 +1,5 @@
 import express, { type Application, type Request, type Response } from 'express';
+import cors from "cors"
 
 // TO DO:
 
@@ -8,13 +9,24 @@ import express, { type Application, type Request, type Response } from 'express'
 // 4. Commands commands select collection 
 
 const app: Application = express();
-export const port = process.env.PORT || 8000;
-export const baseURL = `http://localhost:${port}`
+
+app.use(cors({
+  origin : "http://localhost:5173"
+}))
+
+const port = process.env.PORT || 8000;
+const baseURL = `http://localhost:${port}`
+
+app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Express & TypeScript Server');
 });
 
+app.post('/commands', (req: Request, res: Response) => {
+  console.log(req.body)
+  res.json({ status: 'received', commands: req.body })
+})
 
 app.listen(port, () => {
   console.log(`Server is running on ${baseURL}`);
